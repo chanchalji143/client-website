@@ -1,0 +1,1448 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>City Dental Hospital</title>
+
+    <!-- ================= BOOTSTRAP CSS ================= -->
+
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+
+    <!-- ================= CUSTOM CSS ================= -->
+
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+
+    <link rel="stylesheet" href="{% static 'home/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+    <link rel="shortcut icon" href="{{ clinic.logo.url }}" type="image/x-icon">
+
+  </head>
+
+  <body>
+
+    <!-- =====================================================
+                         NAVBAR
+===================================================== -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+      <div class="container">
+        <!-- LOGO -->
+
+        <a class="navbar-brand fw-bold" href="#">
+          <img src="{{ clinic.logo.url }}" class="web-icon"> City Dental
+          Hospital
+        </a>
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- NAVIGATION -->
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#"> Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#about"> About </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#services"> Services </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#doctor"> Doctor </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#faq"> FAQ </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact"> Contact </a>
+            </li>
+          </ul>
+
+          <!-- NAVBAR BUTTON -->
+
+          <a href="#appointment" class="btn btn-primary ms-lg-3">
+            Book Appointment
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- =====================================================
+                         HERO
+===================================================== -->
+
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center min-vh-75">
+          <!-- HERO CONTENT -->
+
+          <div class="col-lg-6">
+            <span class="badge bg-primary-subtle text-primary mb-3">
+              Trusted Dental Care in Bawal
+            </span>
+
+            <h1 class="display-4 fw-bold">
+              Your Smile
+
+              <span class="text-primary"> Deserves </span>
+
+              the Best Care
+            </h1>
+
+            <p class="lead text-secondary mt-3">
+              Professional dental care with experienced dentists, modern
+              technology and personalized treatment for every patient.
+            </p>
+
+            <!-- HERO BUTTONS -->
+
+            <div class="mt-4">
+              <a href="#appointment" class="btn btn-primary btn-lg me-2">
+                Book Appointment
+              </a>
+
+              <a href="#services" class="btn btn-outline-primary btn-lg">
+                Our Services
+              </a>
+            </div>
+
+            <!-- HERO STATS -->
+
+            <div class="row mt-5">
+              <div class="col-4">
+                <h4 class="fw-bold">16+</h4>
+
+                <small class="text-secondary"> Years Experience </small>
+              </div>
+
+              <div class="col-4">
+                <h4 class="fw-bold">23K+</h4>
+
+                <small class="text-secondary"> Patients </small>
+              </div>
+
+              <div class="col-4">
+                <h4 class="fw-bold">4.5</h4>
+
+                <small class="text-secondary"> Rating </small>
+              </div>
+            </div>
+          </div>
+
+          <!-- HERO IMAGE -->
+
+          <div class="col-lg-6 mt-5 mt-lg-0">
+            <!-- <img
+              src="images/photo-1606811971618-4486d14f3f99.avif"
+              alt="Dental Clinic"
+              class="img-fluid rounded-4 shadow hero-image"
+            /> -->
+
+            <img src="{% static 'home/images/photo-1606811971618-4486d14f3f99.avif' %}" class="img-fluid rounded-4 shadow hero-image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+                       SERVICES
+===================================================== -->
+
+    <section id="services" class="py-5">
+      <div class="container">
+        <!-- HEADING -->
+
+        <div class="text-center mb-5">
+          <span class="text-primary fw-semibold"> OUR SERVICES </span>
+
+          <h2 class="fw-bold mt-2">Complete Dental Care</h2>
+
+          <p class="text-secondary mx-auto services-intro">
+            From routine checkups to advanced dental treatments, we provide
+            personalized care for your complete oral health.
+          </p>
+        </div>
+
+        <!-- SERVICES GRID -->
+
+        <div class="row g-4">
+          <!-- SERVICE 1 -->
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card service-card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="service-icon">
+                  <!-- <img
+                    src="images/Dental-Cleaning.jpg"
+                    alt=""
+                    class="web-icon-book"
+                  /> -->
+                  <img src="{% static 'home/images/Dental-Cleaning.jpg' %}" class="web-icon-book">
+                </div>
+
+                <h4 class="fw-bold mt-4">Dental Cleaning</h4>
+
+                <p class="text-secondary">
+                  Professional cleaning to keep your teeth healthy, clean and
+                  free from plaque.
+                </p>
+
+                <a
+                  href="#appointment"
+                  class="text-primary text-decoration-none fw-semibold"
+                >
+                  Book Appointment →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SERVICE 2 -->
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card service-card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="service-icon">
+                  <!-- <img
+                    src="images/Teeth-Whitening.jpg"
+                    alt=""
+                    class="web-icon-book"
+                  /> -->
+                  <img src="{% static 'home/images/Teeth-Whitening.jpg' %}" class="web-icon-book">
+                </div>
+
+                <h4 class="fw-bold mt-4">Teeth Whitening</h4>
+
+                <p class="text-secondary">
+                  Improve the appearance of your smile with professional teeth
+                  whitening care.
+                </p>
+
+                <a
+                  href="#appointment"
+                  class="text-primary text-decoration-none fw-semibold"
+                >
+                  Book Appointment →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SERVICE 3 -->
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card service-card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="service-icon">
+                  <!-- <img
+                    src="images/Root-Canal-Treatmen.jpg"
+                    alt=""
+                    class="web-icon-book"
+                  /> -->
+                  <img src="{% static 'home/images/Root-Canal-Treatmen.jpg' %}" class="web-icon-book">
+                </div>
+
+                <h4 class="fw-bold mt-4">Root Canal Treatment</h4>
+
+                <p class="text-secondary">
+                  Professional evaluation and treatment for teeth affected by
+                  infection or damage.
+                </p>
+
+                <a
+                  href="#appointment"
+                  class="text-primary text-decoration-none fw-semibold"
+                >
+                  Book Appointment →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SERVICE 4 -->
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card service-card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="service-icon">
+                  <!-- <img
+                    src="images/Dental-Implants.jpg"
+                    alt=""
+                    class="web-icon-book"
+                  /> -->
+                  <img src="{% static 'home/images/Dental-Implants.jpg' %}" class="web-icon-book">
+                </div>
+
+                <h4 class="fw-bold mt-4">Dental Implants</h4>
+
+                <p class="text-secondary">
+                  Explore tooth replacement options with professional dental
+                  consultation.
+                </p>
+
+                <a
+                  href="#appointment"
+                  class="text-primary text-decoration-none fw-semibold"
+                >
+                  Book Appointment →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SERVICE 5 -->
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card service-card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="service-icon">
+                  <!-- <img
+                    src="images/Braces-&-Alignment.png"
+                    alt=""
+                    class="web-icon-book"
+                  /> -->
+                  <img src="{% static 'home/images/Braces-&-Alignment.png' %}" class="web-icon-book">
+                </div>
+
+                <h4 class="fw-bold mt-4">Braces & Alignment</h4>
+
+                <p class="text-secondary">
+                  Dental alignment consultation and orthodontic treatment
+                  options.
+                </p>
+
+                <a
+                  href="#appointment"
+                  class="text-primary text-decoration-none fw-semibold"
+                >
+                  Book Appointment →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SERVICE 6 -->
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card service-card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="service-icon">
+                  <!-- <img
+                    src="images/Kids-Dentistry.png"
+                    alt=""
+                    class="web-icon-book"
+                  /> -->
+
+                  <img src="{% static 'home/images/Kids-Dentistry.png' %}" class="web-icon-book">
+                </div>
+
+                <h4 class="fw-bold mt-4">Kids Dentistry</h4>
+
+                <p class="text-secondary">
+                  Friendly dental care designed to support healthy smiles for
+                  children.
+                </p>
+
+                <a
+                  href="#appointment"
+                  class="text-primary text-decoration-none fw-semibold"
+                >
+                  Book Appointment →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+                     ABOUT / WHY CHOOSE US
+===================================================== -->
+
+    <section id="about" class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- IMAGE -->
+
+          <div class="col-lg-6">
+            <!-- <img
+              src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=80"
+              alt="Dental Clinic Care"
+              class="img-fluid rounded-4 shadow about-image"
+            /> -->
+            <img src="{% static 'home/images/transport.avif' %}" class="img-fluid rounded-4 shadow hero-image">
+          </div>
+
+          <!-- CONTENT -->
+
+          <div class="col-lg-6">
+            <span class="text-primary fw-semibold"> WHY CHOOSE US </span>
+
+            <h2 class="fw-bold mt-2">Caring for Your Smile With Confidence</h2>
+
+            <p class="text-secondary mt-3">
+              We focus on comfortable, personalized dental care using modern
+              techniques and a patient-first approach.
+            </p>
+
+            <!-- FEATURE 1 -->
+
+            <div class="d-flex mt-4">
+              <div class="feature-icon">✓</div>
+
+              <div class="ms-3">
+                <h5 class="fw-bold">Experienced Dental Care</h5>
+
+                <p class="text-secondary mb-0">
+                  Professional dental care tailored to your individual needs.
+                </p>
+              </div>
+            </div>
+
+            <!-- FEATURE 2 -->
+
+            <div class="d-flex mt-4">
+              <div class="feature-icon">✓</div>
+
+              <div class="ms-3">
+                <h5 class="fw-bold">Modern Technology</h5>
+
+                <p class="text-secondary mb-0">
+                  Modern equipment and treatment approaches for better patient
+                  care.
+                </p>
+              </div>
+            </div>
+
+            <!-- FEATURE 3 -->
+
+            <div class="d-flex mt-4">
+              <div class="feature-icon">✓</div>
+
+              <div class="ms-3">
+                <h5 class="fw-bold">Patient-Focused Approach</h5>
+
+                <p class="text-secondary mb-0">
+                  Clear communication and personalized treatment planning.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+                         DOCTOR
+===================================================== -->
+
+    <section id="doctor" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-semibold"> MEET OUR DENTIST </span>
+
+          <h2 class="fw-bold mt-2">Expert Care From Experienced Hands</h2>
+        </div>
+
+        <div class="row align-items-center g-5">
+          <!-- DOCTOR IMAGE -->
+
+          <div class="col-lg-5">
+            <!-- <img
+              src="images/Predeep Kundu.png"
+              alt="Dental Doctor"
+              class="img-fluid rounded-4 shadow doctor-image"
+            /> -->
+            <img src="{% static 'home/images/Predeep Kundu.png' %}" class="img-fluid rounded-4 shadow hero-image">
+          </div>
+
+          <!-- DOCTOR INFO -->
+
+          <div class="col-lg-7">
+            <h2 class="fw-bold">Dr. Pradeep Kundu</h2>
+
+            <p class="text-primary fw-semibold">B.D.S. (K.U), M.I.D.A</p>
+
+            <p class="text-secondary">
+              Dr. Pradeep Kundu focuses on personalized dental care and helps
+              patients understand their treatment options clearly.
+            </p>
+
+            <div class="row mt-4">
+              <div class="col-sm-6 mb-3">
+                <strong> Experience </strong>
+
+                <p class="text-secondary mb-0">16+ Years</p>
+              </div>
+
+              <div class="col-sm-6 mb-3">
+                <strong> Specialization </strong>
+
+                <p class="text-secondary mb-0">
+                  General Dentistry / Dental Surgeon
+                </p>
+              </div>
+
+              <div class="col-sm-6 mb-3">
+                <strong> Consultation </strong>
+
+                <p class="text-secondary mb-0">By Appointment</p>
+              </div>
+
+              <div class="col-sm-6 mb-3">
+                <strong> Clinic Hours </strong>
+
+                <p class="text-secondary mb-0">Mon - Sat</p>
+              </div>
+            </div>
+
+            <a href="#appointment" class="btn btn-primary btn-lg mt-3">
+              Book Appointment
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+                     PATIENT REVIEWS
+===================================================== -->
+
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-semibold"> PATIENT REVIEWS </span>
+
+          <h2 class="fw-bold mt-2">What Our Patients Say</h2>
+
+          <p class="text-secondary mx-auto reviews-intro">
+            Hear from patients about their experience with our dental care and
+            services.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- REVIEW 1 -->
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card review-card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="review-stars">★★★★★</div>
+
+                <p class="text-secondary mt-3">
+                  Nice doctor and treatment is very smooth and good without
+                  pain.
+                </p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <div class="review-avatar">A</div>
+
+                  <div class="ms-3">
+                    <h6 class="fw-bold mb-1">SATYAM SWAROOP</h6>
+
+                    <small class="text-secondary"> Dental Cleaning </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- REVIEW 2 -->
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card review-card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="review-stars">★★★★★</div>
+
+                <p class="text-secondary mt-3">
+                  Dr. Pradeep Kundu explained the treatment clearly and made the
+                  entire process easy to understand.
+                </p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <div class="review-avatar">R</div>
+
+                  <div class="ms-3">
+                    <h6 class="fw-bold mb-1">Rohit Singh</h6>
+
+                    <small class="text-secondary"> Root Canal Treatment </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- REVIEW 3 -->
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card review-card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="review-stars">★★★★★</div>
+
+                <p class="text-secondary mt-3">
+                  Superb quality work of Dr with reasonable price.
+                </p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <div class="review-avatar">P</div>
+
+                  <div class="ms-3">
+                    <h6 class="fw-bold mb-1">Preeti Kundu</h6>
+
+                    <small class="text-secondary"> Teeth Whitening </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+                     PATIENT REVIEWS
+===================================================== -->
+
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row g-4">
+          <!-- REVIEW 1 -->
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card review-card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="review-stars">★★★★★</div>
+
+                <p class="text-secondary mt-3">
+                  I had a very good experience at City Dental Hospital. Dr.
+                  Pradeep Kundu is professional, polite, and explains the
+                  treatment clearly. The staff is also friendly and helpful.
+                  Highly recommended for quality dental care.
+                </p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <div class="review-avatar">A</div>
+
+                  <div class="ms-3">
+                    <h6 class="fw-bold mb-1">Rahul Sharma</h6>
+
+                    <small class="text-secondary"> Braces & Alignment </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- REVIEW 2 -->
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card review-card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="review-stars">★★★★★</div>
+
+                <p class="text-secondary mt-3">
+                  Excellent dental treatment and a comfortable environment. Dr.
+                  Pradeep Kundu treated me with great care and explained every
+                  step of the procedure. I am very satisfied with the service
+                  and would recommend this hospital to others.
+                </p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <div class="review-avatar">R</div>
+
+                  <div class="ms-3">
+                    <h6 class="fw-bold mb-1">Neha Verma</h6>
+
+                    <small class="text-secondary"> Root Canal Treatment </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- REVIEW 3 -->
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card review-card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="review-stars">★★★★★</div>
+
+                <p class="text-secondary mt-3">
+                  City Dental Hospital provides professional and caring dental
+                  services. Dr. Pradeep Kundu is knowledgeable and takes time to
+                  understand the patient's concerns. The clinic is clean, and
+                  the overall experience was very good.
+                </p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <div class="review-avatar">P</div>
+
+                  <div class="ms-3">
+                    <h6 class="fw-bold mb-1">Amit Kumar</h6>
+
+                    <small class="text-secondary"> Kids Dentistry </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+                         GALLERY
+===================================================== -->
+
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-semibold"> OUR CLINIC </span>
+
+          <h2 class="fw-bold mt-2">Modern Dental Care Environment</h2>
+
+          <p class="text-secondary mx-auto gallery-intro">
+            Take a look at our clinic environment and patient-focused dental
+            care.
+          </p>
+        </div>
+
+        <div class="row g-4">
+            {% for gallery in galleries %}
+          <div class="col-md-6 col-lg-4">
+            <!-- <img
+              src="images/clinic-ahed.jpeg"
+              alt="Dental Clinic Interior"
+              class="img-fluid rounded-4 shadow-sm gallery-image"
+            /> -->
+            <img src="{{ gallery.image.url }}" class="img-fluid rounded-4 shadow-sm gallery-image" alt="{{ gallery.title }}">
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+                       APPOINTMENT
+===================================================== -->
+
+    <section id="appointment" class="py-5 appointment-section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- LEFT -->
+
+          <div class="col-lg-5">
+            <span class="text-primary fw-semibold"> BOOK AN APPOINTMENT </span>
+
+            <h2 class="fw-bold mt-2">Schedule Your Dental Visit</h2>
+
+            <p class="text-secondary mt-3">
+              Take the first step towards a healthier smile. Fill out the form
+              and our clinic team will contact you to confirm your appointment.
+            </p>
+
+            <div class="d-flex align-items-center mt-4">
+              <div class="appointment-icon">✓</div>
+
+              <div class="ms-3">
+                <h6 class="fw-bold mb-1">Easy Appointment Booking</h6>
+
+                <small class="text-secondary">
+                  Quick and simple appointment request.
+                </small>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center mt-3">
+              <div class="appointment-icon">✓</div>
+
+              <div class="ms-3">
+                <h6 class="fw-bold mb-1">Friendly Dental Team</h6>
+
+                <small class="text-secondary">
+                  Patient-focused care and consultation.
+                </small>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center mt-3">
+              <div class="appointment-icon">✓</div>
+
+              <div class="ms-3">
+                <h6 class="fw-bold mb-1">Flexible Consultation</h6>
+
+                <small class="text-secondary">
+                  Choose a convenient date and time.
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORM -->
+
+         <div class="col-lg-7">
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        {% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show mb-4"
+             role="alert">
+
+            {{ message }}
+
+            <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close">
+            </button>
+
+        </div>
+    {% endfor %}
+{% endif %}
+
+        <div class="card border-0 shadow appointment-card">
+
+            <div class="card-body p-4 p-lg-5">
+
+                <h4 class="fw-bold mb-4">
+                    Request an Appointment
+                </h4>
+
+                <!-- Full Name -->
+                <div class="mb-3">
+
+                    <label for="patientName"
+                           class="form-label fw-semibold">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="patientName"
+                        name="name"
+                        class="form-control"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Phone -->
+                <div class="mb-3">
+
+                    <label for="patientPhone"
+                           class="form-label fw-semibold">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="patientPhone"
+                        name="phone"
+                        class="form-control"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Service -->
+                <div class="mb-3">
+
+                    <label for="service"
+                           class="form-label fw-semibold">
+                        Select Service
+                    </label>
+
+                    <select
+                        id="service"
+                        name="service"
+                        class="form-select"
+                        required
+                    >
+
+                        <option value="">
+                            Choose a service
+                        </option>
+
+                        <option value="cleaning">
+                            Dental Cleaning
+                        </option>
+
+                        <option value="whitening">
+                            Teeth Whitening
+                        </option>
+
+                        <option value="root_canal">
+                            Root Canal Treatment
+                        </option>
+
+                        <option value="implant">
+                            Dental Implants
+                        </option>
+
+                        <option value="braces">
+                            Braces & Alignment
+                        </option>
+
+                        <option value="kids">
+                            Kids Dentistry
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Date -->
+                <div class="mb-3">
+
+                    <label for="appointmentDate"
+                           class="form-label fw-semibold">
+                        Preferred Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="appointmentDate"
+                        name="date"
+                        class="form-control"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Message -->
+                <div class="mb-4">
+
+                    <label for="message"
+                           class="form-label fw-semibold">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        class="form-control"
+                        rows="4"
+                        placeholder="Tell us how we can help you..."
+                    ></textarea>
+
+                </div>
+
+                <!-- Submit -->
+                <button
+                    type="submit"
+                    class="btn btn-primary btn-lg w-100"
+                >
+                    Request Appointment
+                </button>
+
+
+
+
+                <!-- WhatsApp -->
+                <div class="text-center mt-3">
+
+                    <small class="text-secondary">
+                        Prefer WhatsApp?
+                    </small>
+
+                    <a
+                        href="https://wa.me/919813821003?text=नमस्ते%20City%20Dental%20Hospital%2C%20मुझे%20डेंटल%20ट्रीटमेंट%20के%20बारे%20में%20जानकारी%20चाहिए।"
+                        class="text-success fw-semibold text-decoration-none ms-1"
+                        target="_blank"
+                    >
+                        Chat With Us →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
+
+    <!-- =====================================================
+                          FAQ
+===================================================== -->
+
+    <section id="faq" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-semibold">
+            FREQUENTLY ASKED QUESTIONS
+          </span>
+
+          <h2 class="fw-bold mt-2">Frequently Asked Questions</h2>
+
+          <p class="text-secondary mx-auto faq-intro">
+            Find answers to some common questions about our dental treatments
+            and appointments.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="accordion" id="faqAccordion">
+              <!-- FAQ 1 -->
+
+              <div class="accordion-item border-0 mb-3 shadow-sm">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button fw-semibold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqOne"
+                  >
+                    How can I book a dental appointment?
+                  </button>
+                </h2>
+
+                <div
+                  id="faqOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body text-secondary">
+                    You can request an appointment using our online appointment
+                    form or contact the clinic through WhatsApp or phone.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 2 -->
+
+              <div class="accordion-item border-0 mb-3 shadow-sm">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-semibold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqTwo"
+                  >
+                    How often should I visit a dentist?
+                  </button>
+                </h2>
+
+                <div
+                  id="faqTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body text-secondary">
+                    Regular dental checkups can help identify oral health
+                    problems early. Your dentist can recommend a visit schedule
+                    based on your individual needs.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 3 -->
+
+              <div class="accordion-item border-0 mb-3 shadow-sm">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-semibold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqThree"
+                  >
+                    Do you provide dental treatment for children?
+                  </button>
+                </h2>
+
+                <div
+                  id="faqThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body text-secondary">
+                    Yes, our clinic can provide dental care for children.
+                    Treatment options depend on the child's individual dental
+                    needs.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 4 -->
+
+              <div class="accordion-item border-0 mb-3 shadow-sm">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-semibold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqFour"
+                  >
+                    Do you provide root canal treatment?
+                  </button>
+                </h2>
+
+                <div
+                  id="faqFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body text-secondary">
+                    Root canal treatment may be recommended for teeth affected
+                    by infection or damage. A dentist can evaluate your tooth
+                    and explain the appropriate treatment options.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 5 -->
+
+              <div class="accordion-item border-0 mb-3 shadow-sm">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-semibold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqFive"
+                  >
+                    How can I contact the clinic?
+                  </button>
+                </h2>
+
+                <div
+                  id="faqFive"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body text-secondary">
+                    You can contact the clinic by phone, WhatsApp, or through
+                    the contact form available on this website.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+                        CONTACT
+===================================================== -->
+
+    <section id="contact" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-semibold"> CONTACT US </span>
+
+          <h2 class="fw-bold mt-2">Get In Touch With Us</h2>
+
+          <p class="text-secondary mx-auto contact-intro">
+            Have a question or want to book an appointment? Contact our dental
+            clinic using the information below.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- ADDRESS -->
+
+          <div class="col-md-6 col-lg-3">
+            <div class="contact-card text-center p-4 h-100">
+              <div class="contact-icon">📍</div>
+
+              <h5 class="fw-bold mt-3">Clinic Address</h5>
+
+              <p class="text-secondary mb-0">
+                Civil Hospital Road,<br />
+                Bawal Harchandpur,<br />
+                Haryana 123501
+              </p>
+            </div>
+          </div>
+
+          <!-- PHONE -->
+
+          <div class="col-md-6 col-lg-3">
+            <div class="contact-card text-center p-4 h-100">
+              <div class="contact-icon">📞</div>
+
+              <h5 class="fw-bold mt-3">Phone</h5>
+
+              <p class="text-secondary mb-0">+91 9813821003</p>
+
+              <a
+                href="tel:+919813821003"
+                class="text-primary text-decoration-none"
+              >
+                Call Now
+              </a>
+            </div>
+          </div>
+
+          <!-- EMAIL -->
+
+          <div class="col-md-6 col-lg-3">
+            <div class="contact-card text-center p-4 h-100">
+              <div class="contact-icon">✉️</div>
+
+              <h5 class="fw-bold mt-3">Email</h5>
+
+              <p class="text-secondary mb-0">pkundu52@gmail.com</p>
+
+              <a
+                href="mailto:pkundu52@gmail.com"
+                class="text-primary text-decoration-none"
+              >
+                Send Email
+              </a>
+            </div>
+          </div>
+
+          <!-- HOURS -->
+
+          <div class="col-md-6 col-lg-3">
+            <div class="contact-card text-center p-4 h-100">
+              <div class="contact-icon">🕒</div>
+
+              <h5 class="fw-bold mt-3">Opening Hours</h5>
+
+              <p class="text-secondary mb-0">
+                Monday - Saturday<br />
+                8:30 AM - 8:00 PM
+              </p>
+
+              <small class="text-secondary"> Sunday 2:00 PM </small>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAP + CTA -->
+
+        <div class="row g-4 mt-4">
+          <!-- MAP -->
+
+          <div class="col-lg-7">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.343877322503!2d76.5620841752677!3d28.075051775973773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d53b2a9538c97%3A0x4d683f8755cd3b9e!2sCity%20Dental%20Hospital!5e0!3m2!1sen!2sin!4v1790222094431!5m2!1sen!2sin"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- CTA -->
+
+          <div class="col-lg-5">
+            <div class="contact-cta h-100 p-4 p-lg-5">
+              <span class="text-primary fw-semibold">
+                NEED AN APPOINTMENT?
+              </span>
+
+              <h3 class="fw-bold mt-2">We're Here To Help</h3>
+
+              <p class="text-secondary mt-3">
+                Get in touch with our clinic team and schedule a consultation at
+                a convenient time.
+              </p>
+
+              <a href="#appointment" class="btn btn-primary btn-lg w-100 mt-3">
+                Book Appointment
+              </a>
+
+              <!-- <a
+                href="https://wa.me/9109813821003"
+                target="_blank"
+                class="btn btn-success btn-lg w-100 mt-3"
+              >
+                WhatsApp Us
+              </a> -->
+
+              <a
+                href="https://wa.me/919813821003?text=नमस्ते%20City%20Dental%20Hospital%2C%20मुझे%20डेंटल%20ट्रीटमेंट%20के%20बारे%20में%20जानकारी%20चाहिए।"
+                class="btn btn-success btn-lg w-100 mt-3"
+                target="_blank"
+              >
+                WhatsApp Now
+              </a>
+              <div class="text-center mt-4">
+                <small class="text-secondary">
+                  Mon - Sat | 8:30 AM - 8:00 PM
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+                         FOOTER
+===================================================== -->
+
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row g-4 py-5">
+          <!-- CLINIC INFO -->
+
+          <div class="col-lg-4">
+            <a href="#" class="footer-brand text-decoration-none">
+              <img src="{{ clinic.logo.url }}" class="web-icon"> City Dental
+              Hospital
+            </a>
+
+            <p class="text-white-50 mt-3 footer-description">
+              Professional dental care with a patient-first approach. Helping
+              you maintain a healthy and confident smile.
+            </p>
+
+            <a href="#appointment" class="btn btn-primary mt-2">
+              Book Appointment
+            </a>
+          </div>
+
+          <!-- QUICK LINKS -->
+
+          <div class="col-6 col-lg-2">
+            <h5 class="text-white fw-bold">Quick Links</h5>
+
+            <ul class="footer-links mt-3">
+              <li>
+                <a href="#"> Home </a>
+              </li>
+
+              <li>
+                <a href="#about"> About </a>
+              </li>
+
+              <li>
+                <a href="#services"> Services </a>
+              </li>
+
+              <li>
+                <a href="#doctor"> Doctor </a>
+              </li>
+
+              <li>
+                <a href="#faq"> FAQ </a>
+              </li>
+
+              <li>
+                <a href="#contact"> Contact </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- SERVICES -->
+
+          <div class="col-6 col-lg-3">
+            <h5 class="text-white fw-bold">Our Services</h5>
+
+            <ul class="footer-links mt-3">
+              <li>
+                <a href="#services"> Dental Cleaning </a>
+              </li>
+
+              <li>
+                <a href="#services"> Teeth Whitening </a>
+              </li>
+
+              <li>
+                <a href="#services"> Root Canal Treatment </a>
+              </li>
+
+              <li>
+                <a href="#services"> Dental Implants </a>
+              </li>
+
+              <li>
+                <a href="#services"> Kids Dentistry </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- CONTACT -->
+
+          <div class="col-lg-3">
+            <h5 class="text-white fw-bold">Contact Us</h5>
+
+            <ul class="footer-contact mt-3">
+              <li>📍 Civil Hospital Road Bawal Harchandpur, Haryana 123501</li>
+
+              <li>
+                📞
+
+                <a href="tel:+919999999999"> +91 9813821003 </a>
+              </li>
+
+              <li>
+                ✉️
+
+                <a href="mailto:pkundu52@gmail.com"> pkundu52@gmail.com </a>
+              </li>
+
+              <li>🕒 Mon - Sat: 8:30 AM - 8:00 PM</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+          <div class="row align-items-center py-3">
+            <div class="col-md-6">
+              <p class="text-white-50 mb-0">
+                © 2026 City Dental Hospital. All Rights Reserved.
+              </p>
+            </div>
+
+            <!-- <div class="col-md-6 text-md-end mt-2 mt-md-0">
+              <a href="#" class="footer-bottom-link"> Privacy Policy </a>
+
+              <a href="#" class="footer-bottom-link ms-3">
+                Terms & Conditions
+              </a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =====================================================
+                  BOOTSTRAP JAVASCRIPT
+===================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
