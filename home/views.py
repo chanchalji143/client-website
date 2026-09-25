@@ -21,6 +21,7 @@ def home(request):
         service = request.POST.get("service")
         date = request.POST.get("date")
         message = request.POST.get("message")
+        email = request.POST.get("email")
 
         # Database me Appointment save karna
         appointment = Appointment.objects.create(
@@ -29,6 +30,7 @@ def home(request):
             service=service,
             date=date,
             message=message,
+            email=email
         )
 
         # Doctor ko Email Notification
@@ -46,7 +48,7 @@ Message:
 {message}
 """,
             from_email=None,
-            recipient_list=["chanchalsharmaji143@gmail.com"],
+            recipient_list=["chanchalsharma14116@gmail.com"],
         )
 
         # Success message

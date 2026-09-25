@@ -7,6 +7,7 @@ class AppointmentAdmin(admin.ModelAdmin):
 
     list_display = (
         'name',
+        'email',
         'phone',
         'service',
         'date',
