@@ -41,6 +41,7 @@ New Appointment Received
 
 Patient Name: {name}
 Phone Number: {phone}
+Visitor Email: {email}
 Service: {service}
 Preferred Date: {date}
 
