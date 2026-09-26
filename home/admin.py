@@ -46,4 +46,4 @@ from .models import ClinicSettings
 
 @admin.register(ClinicSettings)
 class ClinicSettingsAdmin(admin.ModelAdmin):
-    list_display = ['id', 'logo']
+    list_display = ['id', 'logo', 'years_experience', 'patients_count', 'rating']

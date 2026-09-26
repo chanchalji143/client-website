@@ -60,8 +60,15 @@ class Gallery(models.Model):
     from django.db import models
 
 
+
+
 class ClinicSettings(models.Model):
-    logo = models.ImageField(upload_to='clinic/')
+
+    logo = models.ImageField(upload_to='clinic/', blank=True, null=True)
+
+    years_experience = models.PositiveIntegerField(default=16)
+    patients_count = models.PositiveIntegerField(default=23)
+    rating = models.DecimalField(max_digits=3, decimal_places=1, default=4.5)
 
     def __str__(self):
         return "Clinic Settings"
