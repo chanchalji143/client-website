@@ -1,66 +1,77 @@
 {% load static %}
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+ <head>
+    <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>City Dental Hospital | Best Dental Care in Bawal & Rewari</title>
-    <meta name="description" content="City Dental Hospital provides quality dental care, dental treatments and oral healthcare services in Bawal and Rewari. Book your dental consultation today.">
 
-    <!-- ================= BOOTSTRAP CSS ================= -->
+    <meta
+        name="description"
+        content="City Dental Hospital provides quality dental care, dental treatments and oral healthcare services in Bawal and Rewari. Book your dental consultation today."
+    >
 
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="{% static 'home/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
 
-    <!-- ================= CUSTOM CSS ================= -->
+    <link
+        rel="icon"
+        type="image/x-icon"
+        href="{% static 'home/images/favicon.ico' %}"
+    >
 
-    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <!-- Google Search Console -->
+    <meta
+        name="google-site-verification"
+        content="aERWfJ_J19QinQX2iL_zFSoK2U80PRRqzKKwJdU42cI"
+    >
 
-    <link rel="stylesheet" href="{% static 'home/css/bootstrap.css' %}" />
-    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
-  <link rel="icon" type="image/x-icon" href="{% static 'home/images/favicon.ico' %}">
-
-  <meta name="google-site-verification" content="aERWfJ_J19QinQX2iL_zFSoK2U80PRRqzKKwJdU42cI" />
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Dentist",
-  "name": "City Dental Hospital",
-  "url": "https://client-django.getvoroa.com/",
-  "telephone": "+919813821003",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Civil Hospital Road, Near NH48, Saban Chowk",
-    "addressLocality": "Bawal",
-    "addressRegion": "Haryana",
-    "postalCode": "123501",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 28.0750518,
-    "longitude": 76.5620842
-  },
-  "openingHoursSpecification": [
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-      ],
-      "opens": "08:30",
-      "closes": "20:00"
-    }
-  ]
-}
-</script>
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "City Dental Hospital",
+      "url": "https://client-django.getvoroa.com/",
+      "image": "https://client-django.getvoroa.com/static/home/images/Predeep%20Kundu.png",
+      "telephone": "+919813821003",
 
-  </head>
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Civil Hospital Road, Near NH48, Saban Chowk",
+        "addressLocality": "Bawal",
+        "addressRegion": "Haryana",
+        "postalCode": "123501",
+        "addressCountry": "IN"
+      },
+
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.0750518,
+        "longitude": 76.5620842
+      },
+
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "08:30",
+          "closes": "20:00"
+        }
+      ]
+    }
+    </script>
+
+</head>
 
   <body>
 
