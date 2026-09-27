@@ -49,6 +49,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "client-django.getvoroa.com",
+    '127.0.0.1'
 ]
 
 
