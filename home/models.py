@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 
 class Appointment(models.Model):
@@ -49,7 +50,8 @@ class Appointment(models.Model):
 
 class Gallery(models.Model):
     title = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='gallery/')
+    # image = models.ImageField(upload_to='gallery/')
+    image = CloudinaryField('image', folder='gallery/')
     description = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -64,7 +66,9 @@ class Gallery(models.Model):
 
 class ClinicSettings(models.Model):
 
-    logo = models.ImageField(upload_to='clinic/', blank=True, null=True)
+    # logo = models.ImageField(upload_to='clinic/', blank=True, null=True)
+    # logo = models.ImageField(upload_to='clinic/', blank=True, null=True)
+    logo = CloudinaryField('logo', folder='clinic/', blank=True, null=True)
 
     years_experience = models.PositiveIntegerField(default=16)
     patients_count = models.PositiveIntegerField(default=23)
