@@ -21,12 +21,14 @@ from home.sitemaps import StaticViewSitemap
 from home.views import home
 from django.conf import settings
 from django.conf.urls.static import static
+from home.views import home, robots_txt
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('sitemap.xml', sitemap, {'sitemaps': {'static': StaticViewSitemap}}, name='sitemap'),
+    path('robots.txt', robots_txt, name='robots'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

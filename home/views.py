@@ -71,3 +71,14 @@ Message:
             "clinic": clinic,
         }
     )
+
+from django.http import HttpResponse
+
+
+def robots_txt(request):
+    content = """User-agent: *
+Allow: /
+
+Sitemap: https://client-django.getvoroa.com/sitemap.xml
+"""
+    return HttpResponse(content, content_type="text/plain")
