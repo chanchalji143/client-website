@@ -48,13 +48,15 @@ SECRET_KEY = 'django-insecure-ydf9e+9&ef)k7q8fsfx+k-irt7pahv6i2t^_osyc+o(bl7ae(q
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    "citydentalhospitalbawal.com",
+    "www.citydentalhospitalbawal.com",
     "client-django.getvoroa.com",
-    '127.0.0.1'
 ]
 
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://client-django.getvoroa.com",
+    "https://citydentalhospitalbawal.com",
+    "https://www.citydentalhospitalbawal.com",
 ]
 
 # Application definition
