@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from django.contrib import messages
+from django.http import HttpResponse
 
 from .models import Appointment, Gallery, ClinicSettings
 
@@ -34,9 +35,10 @@ def home(request):
         )
 
         # Doctor ko Email Notification
-        send_mail(
-    subject=f"New Dental Appointment - {name}",
-    message=f"""
+        email_message = EmailMessage(
+            subject=f"New Dental Appointment - {name}",
+
+            body=f"""
 NEW APPOINTMENT RECEIVED
 
 Patient Name: {name}
@@ -47,11 +49,23 @@ Preferred Date: {date}
 
 Message:
 {message}
+
+--------------------------------
+City Dental Hospital
+Website Appointment System
 """,
-    from_email=None,
-    recipient_list=["chanchalsharmaji143@gmail.com"],
-    reply_to=[email],
-)
+
+            # EMAIL_HOST_USER se sender automatically liya jayega
+            from_email=None,
+
+            # Doctor ka Gmail
+            to=["chanchalsharmaji143@gmail.com"],
+
+            # Patient ke Gmail par Reply jayega
+            reply_to=[email],
+        )
+
+        email_message.send()
 
         # Success message
         messages.success(
@@ -73,13 +87,16 @@ Message:
         }
     )
 
-from django.http import HttpResponse
-
 
 def robots_txt(request):
+
     content = """User-agent: *
 Allow: /
 
 Sitemap: https://citydentalhospitalbawal.com/sitemap.xml
 """
-    return HttpResponse(content, content_type="text/plain")
+
+    return HttpResponse(
+        content,
+        content_type="text/plain"
+    )
