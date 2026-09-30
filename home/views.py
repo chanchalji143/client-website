@@ -35,22 +35,23 @@ def home(request):
 
         # Doctor ko Email Notification
         send_mail(
-            subject="New Dental Appointment",
-            message=f"""
-New Appointment Received
+    subject=f"New Dental Appointment - {name}",
+    message=f"""
+NEW APPOINTMENT RECEIVED
 
 Patient Name: {name}
+Patient Email: {email}
 Phone Number: {phone}
-Visitor Email: {email}
 Service: {service}
 Preferred Date: {date}
 
 Message:
 {message}
 """,
-            from_email=None,
-            recipient_list=["sharmamonti313@gmail.com"],
-        )
+    from_email=None,
+    recipient_list=["chanchalsharmaji143@gmail.com"],
+    reply_to=[email],
+)
 
         # Success message
         messages.success(
