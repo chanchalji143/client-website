@@ -31,6 +31,7 @@ ALLOWED_HOSTS = [
     "citydentalhospitalbawal.com",
     "www.citydentalhospitalbawal.com",
     "client-django.getvoroa.com",
+    "127.0.0.1",
 ]
 
 
@@ -224,3 +225,7 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # =========================================================
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+print("EMAIL USER:", os.getenv("EMAIL_HOST_USER"))
+print("EMAIL PASSWORD SET:", bool(os.getenv("EMAIL_HOST_PASSWORD")))
