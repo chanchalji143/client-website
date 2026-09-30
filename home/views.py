@@ -49,7 +49,7 @@ Message:
 {message}
 """,
             from_email=None,
-            recipient_list=["pkundu52@gmail.com"],
+            recipient_list=["sharmamonti313@gmail.com"],
         )
 
         # Success message
