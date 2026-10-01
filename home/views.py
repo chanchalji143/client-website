@@ -59,7 +59,7 @@ Website Appointment System
             from_email=None,
 
             # Doctor ka Gmail
-            to=["pkundu52@gmail.com"],
+            to=["citydentalhospital425@gmai.com"],
 
             # Patient ke Gmail par Reply jayega
             reply_to=[email],
